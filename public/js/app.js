@@ -1,47 +1,22 @@
 $(document).ready(function () {
-
-    function getData1() {
-        return $.getJSON('js/cardata.json');
-    }
-
-    function getData2() {
-        return $.getJSON('js/fueldata.json');
-    }
-
-    function getData3() {
-        return $.getJSON('js/registrationdata.json');
-    }
     
     $('#insurance_content').load('views/insurance.html', function () {
 
-        
-    
-        $.when(getData1(), getData2(), getData3()).done(function (r1, r2, r3) {
-            var option = populateOption(r1[0], 'Select car type');
-            console.log(option);
-            $('#carType').html(option);
-            
-            var option = populateOption(r2[0], 'Select state');
-            $('#registrationState').html(option);
-            var option = populateOption(r3[0], 'Select fuel type');
-            $('#fuelType').html(option);
-        });
-
         $('#chk1').on('click', function () {
-            // $.getJSON('js/cardata.json', function (res) {
-            //     var option = populateOption(res, 'Select car type');
-            //     $('#carType').html(option);
-            // });
+            $.getJSON('js/cardata.json', function (res) {
+                var option = populateOption(res, 'Select car type');
+                $('#carType').html(option);
+            });
 
-            // $.getJSON('js/fueldata.json', function (res) {
-            //     var option = populateOption(res, 'Select fuel type');
-            //     $('#fuelType').html(option);
-            // });
+            $.getJSON('js/fueldata.json', function (res) {
+                var option = populateOption(res, 'Select fuel type');
+                $('#fuelType').html(option);
+            });
 
-            // $.getJSON('js/registrationdata.json', function (res) {
-            //     var option = populateOption(res, 'Select state');
-            //     $('#registrationState').html(option);
-            // });
+            $.getJSON('js/registrationdata.json', function (res) {
+                var option = populateOption(res, 'Select state');
+                $('#registrationState').html(option);
+            });
             $('#form1').removeClass('hidden');
         });
 
@@ -51,8 +26,10 @@ $(document).ready(function () {
 
             $(this).find('input, select').each(function () {
                 var thisElem = $(this);
-
+                console.log(thisElem);
+                console.log("---");
                 if (thisElem.val() == '') {
+                    console.log(thisElem);
                     thisElem.closest('.form-group').addClass('has-error');
                     errflag = true;
                 }
