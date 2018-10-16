@@ -1,0 +1,112 @@
+<div class="row">
+	<div class="col-md-8 leftcol">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				
+				<div class="form-check" id="radio">
+					<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="chk1" id="chk1" />Insurance
+					</label>
+				</div>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+
+		<form name="form1" id="form1" class="hidden">
+			<div id="cardiv">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<select class="form-control" name="carType" id="carType"></select>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<select class="form-control" name="fuelType" id="fuelType"></select>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<select class="form-control" name="registrationState" id="registrationState"></select>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<input type="text" maxlength="50" class="form-control" name="userName" id="userName" placeholder="Please enter user name" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<input type="text" maxlength="10" class="form-control" name="phoneNumber" id="phoneNumber" maxlength="10"
+							 placeholder="Please enter phone number" />
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12 text-right">
+						<button type="submit" name="s1" class="btn btn-primary">Submit</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row hidden" id="dd_div">
+				<div class="col-md-4">
+					<div class="firstdiv">
+						<ul class="list-group" ondrop="drop(event, this);" ondragover="event.preventDefault();"></ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="seconddiv">
+						<ul class="list-group" ondrop="drop(event, this);" ondragover="event.preventDefault();"></ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<button name="getquote" id="getquote" class="btn btn-primary">Get Quote</button>
+				</div>
+			</div>
+
+		</form>
+	</div>
+
+	<div class="col-md-1">
+	</div>
+
+	<div class="col-md-3 rightcol text-center">
+		<div>Benefits</div>
+		<ul>
+			<li><a href="#">Easy</a></li>
+			<li><a href="#">Modular</a></li>
+			<li><a href="#">Difficult</a></li>
+		</ul>
+	</div>
+
+</div>
+
+<style>
+	.firstdiv ul,
+	.seconddiv ul {
+		min-height: 200px;
+	}
+
+	.list-group {
+		padding: 20px;
+		border: 1px solid #CCC;
+	}
+
+	.rightcol ul li {
+		list-style-type: none;
+		padding: 10px;
+	}
+
+	.leftcol,
+	.rightcol {
+		background: #F8F8F8;
+		min-height: 300px;
+		padding: 10px;
+	}
+</style>

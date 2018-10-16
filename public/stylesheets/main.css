@@ -1,0 +1,165 @@
+body {
+	line-height: 1.5;
+	margin: 0;
+	min-height: 2000px;
+	background-color: #f1f1f1;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	color: #494949;
+}
+
+a, a:visited {
+	color: #494949;
+}
+
+
+.page {
+	width: 100%;
+	background-color: #fff;
+	min-height: 1000px;
+	padding: 24px 0;
+}
+
+.content {
+	width: 100%;
+	padding: 0 12px;
+	position: relative;
+}
+
+.content h1 {
+	font-family: 'Open Sans Condensed';
+	font-size: 36px;
+    color: #141414;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    padding: 0;
+    position: relative;
+}
+
+
+.description {
+	line-height: 1.4;
+    margin: 0 0 20px;
+    font-size: 20px;
+}
+
+.left-col, .right-col {
+	position: relative;
+}
+
+
+.article-body p {
+	font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #141414;
+  line-height: 1.7;
+  margin-bottom: 23px;
+  padding: 0;
+}
+
+.super-mpu {
+	margin-bottom: 48px;
+}
+
+.recommended {
+	border-bottom: 2px solid #F1F1F1;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    text-transform: uppercase;
+    text-transform: uppercase;
+    color: #141414;
+}
+
+
+/* Tablet Breakpoint */
+
+@media screen and (min-width: 728px) {
+	.page {
+/*		margin-left: 16px;
+		margin-right: 16px;*/
+		width: auto
+	}
+
+	.article-social {
+		display: block;
+	}
+		.article-body {
+		padding-left: 60px;
+	}
+}
+
+/* Tablet Landscape Breakpoint */
+
+@media screen and (min-width: 1024px) {
+	.page {
+		margin-left: 0px;
+		margin-right: 0px;
+		width: 100%;
+		margin-top: 120px;
+	}
+	.breadcrumbs {
+		margin: 0 32px 10px;
+		display: block;
+	}
+	.left-col {
+		float: left;
+		width: calc(100% - 367px);
+	}
+	.right-col {
+		float: right;
+		width: 300px;
+	}
+
+	.left-col:before {
+    background-color: #F1F1F1;
+    content: ' ';
+    height: 100%;
+    position: absolute;
+    right: -36px;
+    top: 0;
+    width: 3px;
+	}
+}
+
+/* Desktop Breakpoint */
+
+@media screen and (min-width: 1240px) {
+	.page {
+		max-width: 1240px;
+		margin: 120px auto 0;
+	}
+
+}
+
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}

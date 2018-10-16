@@ -1,0 +1,15 @@
+{
+	"success": "12345676",
+	"bank": [{
+	  "name" : "HDFC",
+	  "price" : "20"
+	  },
+	  {"name" : "SBI",
+	  "price" : "10"
+	  },
+	  {
+	  "name" : "IOB",
+	  "price" : "50"
+	  }]
+  }
+  

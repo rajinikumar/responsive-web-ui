@@ -1,0 +1,15 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.bank_list, .my_bank_list {
+  border:1px solid #ccc;
+  padding: 5px;
+  width: 400px;
+  display: inline-block;
+}
