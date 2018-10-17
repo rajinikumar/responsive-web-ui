@@ -117,7 +117,7 @@ function dragStart(ev) {
 function drop(ev, el) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData('text');
-
+console.log(data);
     if (el.closest('.seconddiv') && $('.seconddiv ul li').length == 1) {
         alert('You can select only one bank, please remove the and add a new bank');
     } else {
