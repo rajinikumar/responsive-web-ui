@@ -82,23 +82,23 @@ $(document).ready(function () {
 	function generateBankList(lists) {
 		let bk = '';
 		$.each(lists, function (i, el) {
-			bk += `<li dragabble="true"  id=li${i}  class="list-group-item" data-bank=${el.name} data-price="${el.price}" ondragstart="dragStart(event);" ondrop="return false;" ondragover="return false;"><div class="list-group-item-heading">${el.name}</div><div class="list-group-item-text"> ${el.price}</div></li>`;
+			bk += `<li draggable="true"  id=li${i}  class="list-group-item" data-bank=${el.name} data-price="${el.price}" ondragstart="dragStart(event);" ondrop="return false;" ondragover="return false;"><div class="list-group-item-heading">${el.name}</div><div class="list-group-item-text"> ${el.price}</div></li>`;
 		})
 		console.log(bk);
 
-	//	return bk;
+		return bk;
 
-		var bank = lists;
-            var li = '';
-            for (var i = 0; i < bank.length; i++) {
-                li += '<li draggable="true" id=li' + i + ' class="list-group-item" data-bank="' + bank[i].name + '" data-price="' + bank[i].price + '" ondragstart="dragStart(event);" ondrop="return false;" ondragover="return false;">';
-                li += '<div class="list-group-item-heading">' + bank[i].name + '</div>';
-                li += '<div class="list-group-item-text">' + bank[i].price + '</div>';
-                li += '</li>';
-			}
-			console.log(li);
+		// var bank = lists;
+        //     var li = '';
+        //     for (var i = 0; i < bank.length; i++) {
+        //         li += '<li draggable="true" id=li' + i + ' class="list-group-item" data-bank="' + bank[i].name + '" data-price="' + bank[i].price + '" ondragstart="dragStart(event);" ondrop="return false;" ondragover="return false;">';
+        //         li += '<div class="list-group-item-heading">' + bank[i].name + '</div>';
+        //         li += '<div class="list-group-item-text">' + bank[i].price + '</div>';
+        //         li += '</li>';
+		// 	}
+		// 	console.log(li);
 
-					return li;
+		// 			return li;
 	}
 
 	
